@@ -1,0 +1,7 @@
+mongodb+srv://krestininigor1963:oil%5Fsystem%5F1234@krestininigor.p350x.mongodb.net/notedlym?retryWrites=true&w=majority
+
+mongodb+srv://krestininigor1963:<password>@krestininigor.p350x.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+
+
+curl -X POST -H "Content-Type: application/json" --data '{ "query": "{ notes { id } }" }' https://notedlym.herokuapp.com/

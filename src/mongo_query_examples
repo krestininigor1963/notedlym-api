@@ -1,0 +1,116 @@
+mutation {
+signUp(
+username: "BeeBoop",
+email: "robot@example.com",
+password: "NotARobot10010!"
+)
+}
+
+
+mutation {
+signUp(
+username: "Igor",
+email: "krestininigor1963@gmail.com",
+password: "1234"
+)
+}
+
+
+
+mutation {
+signIn(
+username: "BeeBoop",
+email: "robot@example.com",
+password: "NotARobot10010!"
+)
+}
+
+mutation {
+newNote(content: "Hello! This is a user-created note") {
+id
+content
+}
+}
+
+{
+"Authorization": "<YOUR_JWT>"
+}
+
+query {
+notes {
+id
+}
+}
+
+mongo
+db.notes.find({_id: ObjectId("A DOCUMENT ID HERE")})
+
+query {
+user(username:"BeeBoop") {
+username
+email
+id
+}
+}
+
+
+query {
+users {
+username
+email
+id
+}
+}
+
+
+query {
+me {
+username
+email
+id
+}
+}
+
+mutation {
+newNote(content: "Check check it out!") {
+content
+favoriteCount
+id
+}
+}
+
+
+mutation {
+toggleFavorite(id: "<YOUR_NOTE_ID_HERE>") {
+favoriteCount
+}
+}
+
+
+query {
+note(id: "<YOUR_NOTE_ID_HERE>") {
+id
+content
+# информация об авторе заметки
+author {
+username
+id
+}
+}
+}
+
+
+query {
+noteFeed {
+notes {
+id
+createdAt
+}
+cursor
+hasNextPage
+}
+}
+
+
+
+
